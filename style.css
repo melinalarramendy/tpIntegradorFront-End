@@ -1,0 +1,91 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background: rgb(58, 61, 66);
+}
+
+.comprar {
+    color: rgb(0, 175, 0);
+    font-weight: 400;
+}
+
+.comprar:hover {
+    color: rgb(0, 155, 0);
+}
+
+.encabezado {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/ba1.jpg);
+    background-position: center center;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+
+.encabezado .espacio {
+    width: 40%;
+    margin-top: 150px;
+}
+
+.boton-orador {
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+
+.boton-compra {
+    background: rgb(2, 141, 2);
+}
+
+main h4 {
+    font-size: 16px;
+}
+
+main h2 {
+    font-weight: 700;
+}
+
+.titulo-oct {
+    font-size: 30px;
+}
+
+.octubre-color {
+    background: rgb(58, 61, 66);
+}
+
+.formulario h4 {
+    font-size: 16px;
+}
+
+.formulario h2 {
+    font-weight: 700;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+}
+
+.boton-form {
+    background: rgb(116, 184, 28);
+    border: none;
+}
+
+.boton-form:hover {
+    background: rgb(101, 160, 24);
+}
+
+footer {
+    background: rgb(10, 59, 87);
+}
+
+footer ul {
+    list-style: none;
+    background: rgb(10, 59, 87);
+}
+
+footer ul li a{
+    text-decoration: none;
+}
