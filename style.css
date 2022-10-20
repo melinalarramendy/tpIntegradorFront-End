@@ -21,7 +21,7 @@ nav {
     color: rgb(0, 155, 0);
 }
 
-.encabezado {
+#encabezado {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/ba1.jpg);
     background-position: center center;
     height: 80vh;
@@ -31,7 +31,7 @@ nav {
 }
 
 
-.encabezado .espacio {
+#encabezado .espacio {
     width: 40%;
     margin-top: 150px;
 }
@@ -81,6 +81,30 @@ form {
 
 .boton-form:hover {
     background: rgb(101, 160, 24);
+}
+
+#compraTickets .cuadrados {
+    width: 60%;
+    margin: auto; 
+}
+
+#compraTickets .card {
+    border-radius: 0;
+}
+
+#comprarTickets form {
+    width: 60%;
+    margin: auto; 
+}
+
+.total {
+    background: rgb(167, 219, 252);
+    color: rgb(43, 102, 228);
+    border-radius: 5px;
+}
+
+.total h5 {
+    font-size: 15px;
 }
 
 footer {
