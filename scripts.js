@@ -8,7 +8,7 @@ const cantidadCompra = document.getElementById("cantidadCompra");
 
 const mensajeNombre = document.getElementById("mensajeNombre");
 
-const mensajeEmail = document.getElementById("mensajeEmail");
+const botonBorrar = document.getElementById("botonBorrar")
 
 const totalValorh5 = document.getElementById("totalValor");
 
@@ -16,9 +16,7 @@ const botonOrador = document.getElementById("botonOrador");
 
 const botonResumen = document.getElementById("botonResumen");
 
-const email = document.getElementById("email");//compra
-
-const expRegular = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const expRegular = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 
 function validarNombre() {
@@ -49,6 +47,12 @@ function totalPagar() {
     }
 }
 
+function borrarValor() {
+    totalValorh5.innerHTML = "Total a pagar: $ ";
+}
+
+
 botonOrador.addEventListener("click", validarNombre);
 
 botonResumen.addEventListener("click", totalPagar);
+botonBorrar.addEventListener("click", borrarValor);
