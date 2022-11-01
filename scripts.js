@@ -1,12 +1,15 @@
 const nombreOrador = document.getElementById("nombre");
-
+const nombreCompra = document.getElementById("nombreCompra");
 const apellidoOrador = document.getElementById("apellido");
-
+const apellidoCompra = document.getElementById("apellidoCompra");
 const inputCategoria = document.getElementById("inputCategoria");
+const emailCompra = document.getElementById("emailCompra");
 
 const cantidadCompra = document.getElementById("cantidadCompra");
+const formulario = document.getElementById("formulario");
+const mensajeNombreOrador = document.getElementById("mensajeNombreOrador");
+const mensajeApellidoOrador = document.getElementById("mensajeApellidoOrador");
 
-const mensajeNombre = document.getElementById("mensajeNombre");
 
 const botonBorrar = document.getElementById("botonBorrar")
 
@@ -19,22 +22,47 @@ const botonResumen = document.getElementById("botonResumen");
 const expRegular = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 
-function validarNombre() {
+function validarNombreOrador() {
     if (nombreOrador.value.length < 3) {
-        mensajeNombre.innerHTML = "Ingrese un nombre válido.";
+        mensajeNombreOrador.innerHTML = "Ingrese un nombre válido.";
         
+    } 
+} 
+
+function validarApellidoOrador() {
+    if (apellidoCompra.value.length < 4) {
+        mensajeApellidoOrador.innerHTML = "Ingrese un apellido válido.";
+    }
+}
+
+function validarNombreCompra() {
+    if (nombreCompra.value.length < 3) {
+        nombreCompra.style.border ="1px solid red";
+        nombreCompra.placeholder = "Nombre incorrecto!";
     } else {
-        mensajeNombre.innerHTML = "Nombre correcto!";
+        nombreCompra.style.border ="1px solid green";
+    }
+} 
+
+function validarApellidoCompra() {
+    if (apellidoCompra.value.length < 4) {
+        apellidoCompra.style.border ="1px solid red";
+        apellidoCompra.placeholder = "Apellido incorrecto!";
+    } else {
+        apellidoCompra.style.border ="1px solid green";
     }
 } 
 
 function validarEmail() {
-    if(!expRegular.test(email.value)) {
-        mensajeEmail.innerHTML = "El email no es válido."
+    if(!expRegular.test(emailCompra.value)) {
+        emailCompra.style.border ="1px solid red";
+        emailCompra.placeholder = "Correo incorrecto!";
     } else {
-        mensajeEmail.innerHTML = "Email correcto!"
+        emailCompra.style.border ="1px solid green";
     }
 }
+
+
 
 function totalPagar() {
     let precio = 200;
@@ -47,12 +75,18 @@ function totalPagar() {
     }
 }
 
-function borrarValor() {
+function borrar() {
     totalValorh5.innerHTML = "Total a pagar: $ ";
+    formulario.reset(); 
 }
 
 
-botonOrador.addEventListener("click", validarNombre);
+botonOrador.addEventListener("click", validarNombreOrador);
+botonOrador.addEventListener("click", validarApellidoOrador);
 
 botonResumen.addEventListener("click", totalPagar);
-botonBorrar.addEventListener("click", borrarValor);
+botonResumen.addEventListener("click", validarEmail);
+botonResumen.addEventListener("click", validarNombreCompra);
+botonResumen.addEventListener("click",validarApellidoCompra);
+
+botonBorrar.addEventListener("click", borrar);

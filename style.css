@@ -8,6 +8,10 @@ html, body {
     overflow-x: hidden !important;
 }
 
+header .nav {
+    position: fixed;
+}
+
 nav {
     background: rgb(58, 61, 66);
 }

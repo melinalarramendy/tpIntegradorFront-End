@@ -37,7 +37,7 @@
                             <a class="nav-link" href="#lugarfecha">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#formulario">Conviértete en orador</a>
+                            <a class="nav-link" href="#orador">Conviértete en orador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link comprar" href="#compraTickets">Comprar Tickets</a>
@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <section class="formulario">
+    <section class="formulario" id="orador">
         <div class="container py-4">
             <h4 class="text-center text-secondary">CONVIÉRTETE EN UN</h4>
             <h2 class="text-center">ORADOR</h2>
@@ -135,11 +135,15 @@
                     <div class="col">
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre"> 
                     </div>
-
+                    <div>
+                        <p id="mensajeNombreOrador" class="text-secondary"></p>
+                    </div>
                     <div class="col">
                         <input type="text" id="apellido" class="form-control " placeholder="Apellido">
                     </div>
-                
+                    <div>
+                        <p id="mensajeApellidoOrador" class="text-secondary"></p>
+                    </div>
                 
                 </div>
 
@@ -149,9 +153,7 @@
                 </div>
                 <button id="botonOrador" type="button" class="btn btn-primary w-100 boton-form">Enviar</button>
 
-                <div>
-                    <p id="mensajeNombre"></p>
-                </div>
+                
             </form>
             
         </div>
@@ -192,25 +194,24 @@
                 <h2 class="text-center fw-bold">VALOR DE TICKET $200</h2>
             </div>
 
-            <form>
-                <div class="row ">
+            <form id="formulario">
+                <div class="row">
                     <div class="col">
                         <input type="text" id="nombreCompra" class="form-control " placeholder="Nombre"> 
                     </div>
+                    
 
                     <div class="col">
                         <input type="text" id="apellidoCompra" class="form-control " placeholder="Apellido">
                     </div>
-                
+                    
                 
                 </div>
 
                 <div class="my-3">
-                    <input type="text" id="email" class="form-control " placeholder="Correo">
+                    <input type="text" id="emailCompra" class="form-control " placeholder="Correo">
                 </div>
-                <div>
-                    <p id="mensajeEmail"></p>
-                </div>
+                
 
                 <div class="row mb-3">
                     <div class="col">
